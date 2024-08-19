@@ -1,0 +1,33 @@
+services:
+  database-mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      - MYSQL_DATABASE=qltb
+      - MYSQL_ROOT_PASSWORD=luyen123
+    ports:
+      - '3307:3306'
+    volumes:
+      - ./insert.sql:/docker-entrypoint-initdb.d/insert.sql
+    expose:
+      - 3306
+
+  backend:
+    image: luyen2003/node-be:latest
+    restart: unless-stopped
+    environment:
+      - TOKEN=Zabcdefghijklmnopqrstuvwxyz
+      - USER=root
+      - PASS=luyen123
+      - DB_HOST=database-mysql
+      - DATABASE=qltb
+      - DB_PORT=3306
+    ports:
+      - 8080:8080
+    expose:
+      - 8080
+
+  frontend:
+    image: luyen2003/angular-fe:latest
+    ports:
+      - 80:80

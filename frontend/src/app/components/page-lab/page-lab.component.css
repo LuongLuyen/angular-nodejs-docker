@@ -1,0 +1,58 @@
+.content {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  
+}
+.main {
+  width: 100%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+.scroll {
+overflow-y: scroll;
+}
+.item {
+  margin: 0 0 20px 20px;
+}
+.phong_hoc {
+  background-color: rgb(53, 242, 62);
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* color: #fff; */
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.red-background{
+  background-color: red;
+}
+/* responsive
+/* Mobile: width < 740px = 46.1875em */
+@media (max-width: 46.1875em) {
+
+
+}
+
+@media (min-width: 1020px) and (max-width: 1200px){
+
+} 
+/* Tablet: width >= 740px and width <1024px  */
+@media (min-width: 46.25em) and (max-width: 63.9375em){
+
+} 

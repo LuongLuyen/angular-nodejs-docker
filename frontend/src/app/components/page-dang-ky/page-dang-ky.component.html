@@ -1,0 +1,61 @@
+<app-header/>
+<div class="content">
+  <div class="main scroll">
+    <app-search-thong-ke/>
+    <div style="display: flex; justify-content: center; font-size: 2rem; color: red;">Đã đăng ký</div>
+    <div>
+      <table>
+        <thead>
+            <tr>
+              <th>STT</th>
+              <th>Người mượn</th>
+              <th>Tên thiết bị</th>
+              <th>Bộ môn</th>
+              <th>Số lượng</th>
+              <th>Đơn vị</th>
+              <th>Trạng thái</th>
+              <th>Giá(VND)</th>
+              <th>Lớp</th>
+              <th>Ngày đăng ký</th>
+              <th>Ngày nhận</th>
+              <th>Ngày trả</th>
+              <th>Trạng thái</th>
+              <th>Hành động</th>
+            </tr>
+        </thead>
+          <tbody>
+              <tr *ngFor="let x of dangKy;let i=index" [ngClass]="{'vang':x.datra !=='T' && x.datra !=='F'}">
+                <td>{{i+1}}</td>
+                <td>{{x.nguoidung}}</td>
+                <td>{{x.thietbi}}</td>
+                <td>{{x.mon}}</td>
+                <td>{{x.soluong}}</td>
+                <td>{{x.donvi}}</td>
+                <td>{{x.trangthai}}</td>
+                <td>{{x.gia}}</td>
+                <td>{{x.lop}}</td>
+                <td>{{x.ngaydangky}}</td>
+                <td>Vào tiết {{x.tietmuon}} ngày {{x.ngaymuon}}</td>
+                <td>Trả trước tiết {{x.tiettra}} ngày {{x.ngaytra}}</td>
+                <td *ngIf="x.datra==='T' || x.datra ==='F'">{{x.datra}}</td>
+                <td *ngIf="x.datra !=='T' && x.datra !=='F'">Lịch dự kiến</td>
+                <td *ngIf="x.datra==='T'">
+                  <a style="color: rgb(14, 229, 28); display: flex; justify-content: center; text-decoration: none;" class="nav_item" routerLink="/dang-ky" routerLinkActive="active" ariaCurrentWhenActive="page">
+                    <i class="fas fa-check-circle"></i>
+                  </a>
+                </td>
+                <td *ngIf="x.datra!=='T'">
+                  <a (click)="tra(x.id,x.idThietBi)" style="color: red; display: flex; justify-content: center; text-decoration: none;" class="nav_item" routerLink="/dang-ky" routerLinkActive="active" ariaCurrentWhenActive="page">
+                    <i class="fas fa-check-circle"></i>
+                  </a>
+                </td>
+               
+              </tr>
+          </tbody>
+     
+    </table>
+      </div>
+  </div>
+    <app-user/>
+</div>
+<app-footer/>

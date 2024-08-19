@@ -1,0 +1,114 @@
+<app-header/>
+<div class="content">
+  <div class="main scroll">
+    <div style="display: flex; justify-content: center; font-size: 2rem; color: red;">Mượn thiết bị / phòng bộ môn</div>
+
+    <div *ngIf="thietBi.quantity!=='0'" class="dang_ky">
+      <div class="item">
+        <span>Tên thiết bị:</span>
+        <span>{{thietBi.name}}</span>
+      </div>
+      <div class="item">
+        <span>Giáo viên:</span>
+        <span>{{user.name}}</span>
+      </div>
+      <div class="item">
+        <span>Nhập lớp học:</span>
+        <select [(ngModel)]="lop" style="width: 10%;">
+          <option *ngFor="let option of lops" [value]="option">
+            {{ option }}
+          </option>
+        </select>
+      </div>
+      <div class="item">
+        <span>Số lượng mượn:</span>
+        <select [(ngModel)]="soLuong" style="width: 20%;">
+          <option *ngFor="let option of options" [value]="option">
+            {{ option }}
+          </option>
+        </select>
+      </div>
+      <div class="item">
+        <span>Ngày và tiết nhận thiết bị: (Lưu ý: mượn đầu tiết)</span>
+        <div style="width: 40%; display: flex; justify-content: flex-end; height: 40px;">
+          <select [(ngModel)]="tietMuon" >
+            <option [value]="1">Tiết 1(Sáng)</option>
+            <option [value]="2">Tiết 2(Sáng)</option>
+            <option [value]="3">Tiết 3(Sáng)</option>
+            <option [value]="4">Tiết 4(Sáng)</option>
+            <option [value]="5">Tiết 5(Sáng)</option>
+            <option [value]="6">Tiết 6(Chiều)</option>
+            <option [value]="7">Tiết 7(Chiều)</option>
+            <option [value]="8">Tiết 8(Chiều)</option>
+            <option [value]="9">Tiết 9(Chiều)</option>
+            <option [value]="10">Tiết 10(Chiều)</option>
+          </select>
+          <input  [(ngModel)]="ngayMuon" type="date" [min]="today"/>
+        </div>
+      </div>
+      <div class="item">
+        <span>Mượn trong bao lâu:</span>
+        <select [(ngModel)]="tietTra" style="width: 10%;">
+          <option [value]="1">1 Tiết</option>
+          <option [value]="2">2 Tiết</option>
+          <option [value]="3">3 Tiết</option>
+          <option [value]="4">4 Tiết</option>
+          <option [value]="5">5 Tiết</option>
+          <option *ngIf="isPhong" [value]="10">1 Ngày</option>
+          <option *ngIf="isPhong" [value]="70">1 Tuần</option>
+          <option *ngIf="isPhong" [value]="140">2 Tuần</option>
+        </select>
+      </div>
+      <div (click)="create()" class="button">
+        Đăng ký
+      </div>
+      </div>
+
+    <div *ngIf="thietBi.quantity==='0'" class="dang_ky">
+      <div class="item">
+        <span>Tên thiết bị:</span>
+        <span>{{thietBi.name}}</span>
+      </div>
+      <div class="item">
+        <span>Giáo viên:</span>
+        <span>{{user.name}}</span>
+      </div>
+      <div class="item">
+        <span>Nhập lớp học:</span>
+        <select [(ngModel)]="lop" style="width: 10%;">
+          <option *ngFor="let option of lops" [value]="option">
+            {{ option }}
+          </option>
+        </select>
+      </div>
+      <div class="item">
+        <span>Số lượng mượn:</span>
+        <select [(ngModel)]="select" style="width: 40%;">
+          <option value="">Hiện tại hết thiết bị/phòng</option>
+          <option *ngFor="let option of thietBiDangMuon" [value]="option.id">
+           Còn {{option.so_luong}} (thiết bị/phòng) trước tiết {{option.tiet_tra}} ngày {{ option.ngay_tra }} 
+          </option>
+        </select>
+      </div>
+
+      <div class="item">
+        <span>Mượn trong bao lâu:</span>
+        <select [(ngModel)]="tietTra" style="width: 10%;">
+          <option [value]="1">1 Tiết</option>
+          <option [value]="2">2 Tiết</option>
+          <option [value]="3">3 Tiết</option>
+          <option [value]="4">4 Tiết</option>
+          <option [value]="5">5 Tiết</option>
+          <option *ngIf="isPhong" [value]="10">1 Ngày</option>
+          <option *ngIf="isPhong" [value]="70">1 Tuần</option>
+          <option *ngIf="isPhong" [value]="140">2 Tuần</option>
+        </select>
+      </div>
+      <div (click)="create()" class="button">
+        Đăng ký
+      </div>
+      </div>
+  </div>
+    <app-user/>
+</div>
+<app-footer/>

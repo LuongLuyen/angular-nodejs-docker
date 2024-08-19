@@ -1,0 +1,144 @@
+<app-header/>
+<div class="content">
+  <div class="main scroll">
+    <div style="display: flex; justify-content: center; font-size: 2rem; color: red;">Phòng bộ môn</div>
+    <div>
+      <!-- <div class="item">
+        <span style="background-color: #d5e9fe; font-size: 1.2rem; display: flex; justify-content: flex-start; align-items: center; width: 300px; height: 40px; border-top-right-radius: 10px; border-top-left-radius: 10px; padding-left: 10px;">Các phòng đang được sử dụng</span>
+        <div style="background-color: #d5e9fe; display: flex; flex-wrap: wrap;">
+          
+          <div class="phong_hoc" >
+            <div style="color: #fff;" >Hóa Học</div>
+            <div style="background-color: #fff; padding: 5px; border-radius: 10px; width: 150px; ">
+              <div >Tiết: 1</div>
+              <div >Lớp: 10A</div>
+              <div>GV: Nguyễn Văn A</div>
+            </div>
+          </div>
+
+          <div class="phong_hoc" >
+            <div style="color: #fff;" >Hóa Học</div>
+            <div style="background-color: #fff; padding: 5px; border-radius: 10px; width: 150px; ">
+              <div >Tiết: 1</div>
+              <div >Lớp: 10A</div>
+              <div>GV: Nguyễn Văn A</div>
+            </div>
+          </div>
+
+          <div class="phong_hoc" >
+            <div style="color: #fff;" >Hóa Học</div>
+            <div style="background-color: #fff; padding: 5px; border-radius: 10px; width: 150px; ">
+              <div >Tiết: 1</div>
+              <div >Lớp: 10A</div>
+              <div>GV: Nguyễn Văn A</div>
+            </div>
+          </div>
+
+          <div class="phong_hoc" >
+            <div style="color: #fff;" >Hóa Học</div>
+            <div style="background-color: #fff; padding: 5px; border-radius: 10px; width: 150px; ">
+              <div >Tiết: 1</div>
+              <div >Lớp: 10A</div>
+              <div>GV: Nguyễn Văn A</div>
+            </div>
+          </div>
+
+          <div class="phong_hoc" >
+            <div style="color: #fff;" >Hóa Học</div>
+            <div style="background-color: #fff; padding: 5px; border-radius: 10px; width: 150px; ">
+              <div >Tiết: 1</div>
+              <div >Lớp: 10A</div>
+              <div>GV: Nguyễn Văn A</div>
+            </div>
+          </div>
+          
+        </div>
+      </div> -->
+
+      <div class="item">
+        <span style="background-color: #d5e9fe; font-size: 1.2rem; display: flex; justify-content: flex-start; align-items: center; width: 300px; height: 40px; border-top-right-radius: 10px; border-top-left-radius: 10px; padding-left: 10px;">Tầng 1</span>
+        <div style="background-color: #d5e9fe; display: flex; flex-wrap: wrap;">
+          
+          <div *ngFor="let x of T1" class="phong_hoc"  [ngClass]="{'red-background': x.quantity === '0'}">
+            <div style="color: #fff;" >{{x.name}}</div>
+            <div style="background-color: #fff; padding: 5px; border-radius: 10px; width: 150px; ">
+              <a (click)="muonLab(x.id)" routerLink="/muon"  >
+
+                <div style="display: flex; justify-content: center;">Đăng ký</div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="item">
+        <span style="background-color: #d5e9fe; font-size: 1.2rem; display: flex; justify-content: flex-start; align-items: center; width: 300px; height: 40px; border-top-right-radius: 10px; border-top-left-radius: 10px; padding-left: 10px;">Tầng 2</span>
+        <div style="background-color: #d5e9fe; display: flex; flex-wrap: wrap;">
+          
+          <div *ngFor="let x of T2" class="phong_hoc"  [ngClass]="{'red-background': x.quantity === '0'}">
+            <div style="color: #fff;" >{{x.name}}</div>
+            <div style="background-color: #fff; padding: 5px; border-radius: 10px; width: 150px; ">
+              <a (click)="muonLab(x.id)" routerLink="/muon"  >
+
+                <div style="display: flex; justify-content: center;">Đăng ký</div>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="item">
+        <span style="background-color: #d5e9fe; font-size: 1.2rem; display: flex; justify-content: flex-start; align-items: center; width: 300px; height: 40px; border-top-right-radius: 10px; border-top-left-radius: 10px; padding-left: 10px;">Tầng 3</span>
+        <div style="background-color: #d5e9fe; display: flex; flex-wrap: wrap;">
+          
+          <div *ngFor="let x of T3" class="phong_hoc"  [ngClass]="{'red-background': x.quantity === '0'}" >
+            <div style="color: #fff;" >{{x.name}}</div>
+            <div style="background-color: #fff; padding: 5px; border-radius: 10px; width: 150px; ">
+              <a (click)="muonLab(x.id)" routerLink="/muon"  >
+
+                <div style="display: flex; justify-content: center;">Đăng ký</div>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="item">
+        <span style="background-color: #d5e9fe; font-size: 1.2rem; display: flex; justify-content: flex-start; align-items: center; width: 300px; height: 40px; border-top-right-radius: 10px; border-top-left-radius: 10px; padding-left: 10px;">Tầng 4</span>
+        <div style="background-color: #d5e9fe; display: flex; flex-wrap: wrap;">
+          
+          <div *ngFor="let x of T4" class="phong_hoc"  [ngClass]="{'red-background': x.quantity === '0'}" >
+            <div style="color: #fff;" >{{x.name}}</div>
+            <div style="background-color: #fff; padding: 5px; border-radius: 10px; width: 150px; ">
+              <a (click)="muonLab(x.id)" routerLink="/muon"  >
+
+                <div style="display: flex; justify-content: center;">Đăng ký</div>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="item">
+        <span style="background-color: #d5e9fe; font-size: 1.2rem; display: flex; justify-content: flex-start; align-items: center; width: 300px; height: 40px; border-top-right-radius: 10px; border-top-left-radius: 10px; padding-left: 10px;">Khu trong</span>
+        <div style="background-color: #d5e9fe; display: flex; flex-wrap: wrap;">
+          
+          <div *ngFor="let x of KT" class="phong_hoc"  [ngClass]="{'red-background': x.quantity === '0'}">
+            <div style="color: #fff;" >{{x.name}}</div>
+            <div style="background-color: #fff; padding: 5px; border-radius: 10px; width: 150px; ">
+              <a (click)="muonLab(x.id)" routerLink="/muon"  >
+
+                <div style="display: flex; justify-content: center;">Đăng ký</div>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+    <app-user/>
+</div>
+<app-footer/>

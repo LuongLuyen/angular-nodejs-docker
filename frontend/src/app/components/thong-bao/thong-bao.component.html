@@ -1,0 +1,37 @@
+<div class="thong_bao">
+    <h2 style="color: red; border-bottom: solid 1px #eee; margin-bottom: 10px;">Trả thết bị/phòng trong hôm nay</h2>
+    <div *ngFor="let x of quaHan" >
+        <div class="thong_bao-hn" *ngIf="x.datra ==='F'">
+            <div class="red" >{{x.thietbi}} <span class="cb">Cảnh báo quá hạn mượn</span></div>
+            <div>Trước tiết {{x.tiettra}} Ngày {{x.ngaytra}}</div>
+        </div>
+    </div>
+    <div *ngFor="let x of homNay" >
+        <div class="thong_bao-hn" *ngIf="x.datra ==='F'">
+            <div>{{x.thietbi}}</div>
+            <div>Trước tiết {{x.tiettra}} Ngày {{x.ngaytra}}</div>
+        </div>
+    </div>
+
+    <button>
+        <a routerLink="/dang-ky">Trả ngay</a>
+    </button>
+    <h2 style="color: blue;   border-bottom: solid 1px #eee; margin-bottom: 10px;">Thông báo khác</h2>
+    <div class="thong_bao-hn">
+        <div>Hệ thống QLĐT sẽ mở cho sinh viên  khóa 2020 ngành kỹ thuật đăng ký môn học "Thực tập tốt nghiệp" theo kế hoạch: Từ 12h00 ngày 29/05/2024- 24h00 ngày 31/05/2024</div>
+        <div>2024-02-02</div>
+    </div>
+    <div class="thong_bao-hn">
+        <div>Hệ thống QLĐT sẽ mở cho sinh viên  khóa 2020 ngành kỹ thuật đăng ký môn học "Thực tập tốt nghiệp" theo kế hoạch: Từ 12h00 ngày 29/05/2024- 24h00 ngày 31/05/2024</div>
+        <div>2024-02-02</div>
+    </div>
+    <div class="thong_bao-hn">
+        <div>Hệ thống QLĐT sẽ mở cho sinh viên  khóa 2020 ngành kỹ thuật đăng ký môn học "Thực tập tốt nghiệp" theo kế hoạch: Từ 12h00 ngày 29/05/2024- 24h00 ngày 31/05/2024</div>
+        <div>2024-02-02</div>
+    </div>
+    <div class="thong_bao-hn">
+        <div>Hệ thống QLĐT sẽ mở cho sinh viên  khóa 2020 ngành kỹ thuật đăng ký môn học "Thực tập tốt nghiệp" theo kế hoạch: Từ 12h00 ngày 29/05/2024- 24h00 ngày 31/05/2024</div>
+        <div>2024-02-02</div>
+    </div>
+</div>
+<router-outlet></router-outlet>

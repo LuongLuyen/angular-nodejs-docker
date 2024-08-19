@@ -1,0 +1,14 @@
+{
+  "routes": [
+    "/dang-ky",
+    "/error",
+    "/login",
+    "/muon",
+    "/phong-hoc",
+    "/quan-ly",
+    "/them-cap-nhat",
+    "/thiet-bi",
+    "/thong-ke-bao-cao",
+    "/trang-chu"
+  ]
+}

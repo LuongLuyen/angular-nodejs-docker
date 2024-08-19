@@ -1,0 +1,55 @@
+<app-header/>
+<div class="content">
+  <div class="main scroll">
+    <div style="display: flex; justify-content: center;">
+      <app-search/>
+      <a style="text-decoration: none;" routerLink="/them-cap-nhat" routerLinkActive="active" ariaCurrentWhenActive="page">
+        <div (click)="themmoi()" style="background-color: rgb(4, 255, 0); display: flex; justify-content: center;align-items: center; height: 40px; margin-top: 10px; border-radius: 100px; width: 100px; color: #fff;"><i class="fas fa-plus-circle"></i>Thêm mới</div>
+    </a>
+    </div>
+    <div style="display: flex; justify-content: center; font-size: 2rem; color: red;">Quản lý chung</div>
+    <div>
+          <table>
+              <thead>
+                  <tr>
+                    <th>STT</th>
+                    <th>Tên thiết bị</th>
+                    <th>Bộ môn</th>
+                    <th>Số lượng</th>
+                    <th>Giá nhập</th>
+                    <th>Đơn vị</th>
+                    <th>Trạng thái</th>
+                    <th>Ngày nhập</th>
+                    <th>HSD</th>
+                    <th>Sản xuất</th>
+                    <th style="padding-left: 30px; width: 60px;">Sửa</th>
+                    <th style="padding-left: 30px; width: 60px;">Xóa</th>
+                  </tr>
+              </thead>
+                <tbody>
+                  <tr *ngFor="let x of thietBi;let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{x.name}}</td>
+                    <td>{{x.mon}}</td>
+                    <td>{{x.quantity}}</td>
+                    <td>{{x.price}}</td>
+                    <td>{{x.unit}}</td>
+                    <td>{{x.status}}</td>
+                    <td>{{x.ngaynhap}}</td>
+                    <td>{{x.hansudung}}</td>
+                    <td>{{x.location}}</td>
+                      <td>
+                        <a (click)="capnhat(x.id)" style="color: rgb(14, 229, 28); display: flex; justify-content: center; text-decoration: none;" class="nav_item" routerLink="/them-cap-nhat" routerLinkActive="active" ariaCurrentWhenActive="page">
+                          <i class="fa-solid fa-pen"></i>
+                        </a>
+                      </td>
+                      <td (click)="xoa(x.id)" ><i class="fa-solid fa-trash" style="color: red; display: flex; justify-content: center;"></i></td>
+                    </tr>
+                </tbody>
+          </table>
+      </div>
+  </div>
+    <app-user/>
+</div>
+<app-footer/>
+<router-outlet></router-outlet>

@@ -1,0 +1,82 @@
+<div class="header">
+    <div class="w_logo">
+        <a style="margin: 0; padding: 0; width: 100px;" routerLink="/trang-chu" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <img class="logo" src="../../../assets/logo_nvh.png" />
+        </a>
+            <h3 class="namet">
+                THPT Nguyễn Văn Huyên
+            </h3>
+        </div>
+    <div class="vach">.</div>
+    <div class="nav">
+        <a class="nav_item" routerLink="/trang-chu"  routerLinkActive="active" ariaCurrentWhenActive="page">
+            <i class="fa-solid fa-house"></i>
+            <span class="n">Trang chủ</span>
+        </a>
+        <a  class="nav_item" routerLink="/thiet-bi" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <i class="fa-solid fa-business-time"></i>
+            <div class="n">Thiết bị</div>
+        </a>
+        <a class="nav_item" routerLink="/phong-hoc" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <i class="fa-solid fa-house-chimney-user"></i>
+            <div class="n">Phòng bộ môn</div>
+        </a>
+        <a class="nav_item" routerLink="/dang-ky" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <i class="fa-solid fa-circle-check"></i>
+            <div class="n">Đã đăng ký</div>
+        </a>
+        <div *ngIf="status" class="nav_admin">
+            <a class="nav_itema" routerLink="/quan-ly" routerLinkActive="active" ariaCurrentWhenActive="page">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <div class="n">Quản lý chung</div>
+            </a>
+            <a class="nav_itema" routerLink="/thong-ke-bao-cao" routerLinkActive="active" ariaCurrentWhenActive="page">
+                <i class="fa-solid fa-table-list"></i>
+                <div class="n">Thống kê & báo cáo</div>
+            </a>
+        </div>
+    </div>
+    <div class="vach">.</div>
+    <div class="thoat">
+        <div (click)="click()" class="list">
+            <i class="fas fa-list"></i>
+        </div>
+        <div class="bell">
+            <a style="color: #fff;" routerLink="/trang-chu">
+                <i class="fas fa-bell"></i>
+            </a>
+        </div>
+        <div class="out" (click)="logout()" >
+            <i  class="fas fa-sign-out-alt"></i>
+            <span >Thoát</span>
+        </div>
+        <div *ngIf="nav" class="nav_mobile">
+            <a class="nav_mobile-item" routerLink="/trang-chu"  routerLinkActive="active" ariaCurrentWhenActive="page">
+                <span>Trang chủ</span>
+            </a>
+            <a class="nav_mobile-item"  routerLink="/thiet-bi" routerLinkActive="active" ariaCurrentWhenActive="page">
+                <div>Thiết bị</div>
+            </a>
+            <a class="nav_mobile-item" routerLink="/phong-hoc" routerLinkActive="active" ariaCurrentWhenActive="page">
+                <div>Phòng bộ môn</div>
+            </a>
+            <a class="nav_mobile-item" routerLink="/dang-ky" routerLinkActive="active" ariaCurrentWhenActive="page">
+                <div>Đã đăng ký</div>
+            </a>
+            <div class="nav_mobile-item" *ngIf="status" >
+                <a style="color: #333;"  routerLink="/quan-ly" routerLinkActive="active" ariaCurrentWhenActive="page">
+                    <div >Quản lý chung</div>
+                </a>
+                <br/>
+                <a style="color: #333; " routerLink="/thong-ke-bao-cao" routerLinkActive="active" ariaCurrentWhenActive="page">
+                    <div>Thống kê & báo cáo</div>
+                </a>
+            </div>
+            <div class="nav_mobile-item" (click)="logout()" >
+                <i style="color: red;" class="fas fa-sign-out-alt"></i>
+                <span style="color: red;">Đăng xuất</span>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

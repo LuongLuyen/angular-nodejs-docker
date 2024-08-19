@@ -1,0 +1,28 @@
+<div class="w_login">
+    <form (ngSubmit)="login()" className="container">
+        <label htmlFor="uname"><b>Tài khoản:<span style="color: red; font-weight: bold;">admin</span></b></label>
+        <br/>
+        <br/>
+        <input placeholder="UserName" type="text" id="userName" [(ngModel)]="userName" name="userName" required/>
+        <br/>
+        <br/>
+        <label htmlFor="psw"><b>Mật khẩu:<span style="color: red; font-weight: bold;">admin</span></b></label>
+        <br/>
+        <br/>
+        <input placeholder="Password" type="password" id="password" [(ngModel)]="password" name="password" required/>
+       <br/>
+       <br/>
+
+        <button  type="submit" >Đăng nhập</button>
+        <!-- <label>
+          <input type="checkbox" /> Ghi nhớ đăng nhập
+        </label> -->
+        <br/>
+        <br/>   
+      </form>
+      <a href="/">
+        <div>Đăng ký</div>
+      </a>
+      <br/> 
+      <span className="psw">Quên mật khẩu?</span>
+</div>

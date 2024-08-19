@@ -1,0 +1,26 @@
+.thong_bao {
+    height: 80vh;
+    margin-left: 20px;
+}
+.thong_bao-hn {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    border-bottom: solid 1px #eee;
+}
+button {
+    background-color: rgb(74, 236, 49);
+    width: 100px;
+    height: 40px;
+    border-radius: 100px;
+    color: #fff;
+}
+.red {
+    color: red;
+}
+.cb {
+    background-color: red;
+    color: #fff;
+    margin-left: 10px;
+    border-radius: 10px;
+}

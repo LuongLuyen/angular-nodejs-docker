@@ -1,0 +1,57 @@
+<app-header/>
+<div class="content">
+  <div class="main scroll">
+    <div  class="excel">
+      <div (click)="exportToExcelTb()" style="background-color: #6aff00; width: 150px; height: 40px; border-radius: 100px; display: flex;justify-content: center;align-items: center; margin: 5px;"><i class="fas fa-file-export"></i>Thiết bị</div>
+      <div (click)="exportToExcelNd()" style="background-color: #6aff00; width: 150px; height: 40px; border-radius: 100px; display: flex;justify-content: center;align-items: center; margin: 5px;"><i class="fas fa-file-export"></i>Người dùng</div>
+      <div (click)="exportToExcelHh()" style="background-color: #6aff00; width: 150px; height: 40px; border-radius: 100px; display: flex;justify-content: center;align-items: center; margin: 5px;"><i class="fas fa-file-export"></i>Hết hạn</div>
+      <div (click)="exportToExcelTk()" style="background-color: #6aff00; width: 150px; height: 40px; border-radius: 100px; display: flex;justify-content: center;align-items: center; margin: 5px;"><i class="fas fa-file-export"></i>Thống kê</div>
+    </div>
+    <app-search-thong-ke/>
+ 
+    <div style="display: flex; justify-content: center; font-size: 2rem; color: red;">Thống kê và báo cáo</div>
+    <div>
+          <table>
+              <thead>
+                  <tr>
+                    <th>STT</th>
+                    <th>Người mượn</th>
+                    <th>Tên thiết bị</th>
+                    <th>Bộ môn</th>
+                    <th>Số lượng</th>
+                    <th>Đơn vị</th>
+                    <th>Trạng thái</th>
+                    <th>Giá(VND)</th>
+                    <th>Lớp</th>
+                    <th>Ngày đăng ký</th>
+                    <th>Ngày nhận</th>
+                    <th>Ngày trả</th>
+                    <th>Đã trả</th>
+                  </tr>
+              </thead>
+                <tbody>
+                    <tr *ngFor="let x of lichSu;let i=index">
+                      <td>{{i+1}}</td>
+                      <td>{{x.nguoidung}}</td>
+                      <td>{{x.thietbi}}</td>
+                      <td>{{x.mon}}</td>
+                      <td>{{x.soluong}}</td>
+                      <td>{{x.donvi}}</td>
+                      <td>{{x.trangthai}}</td>
+                      <td>{{x.gia}}</td>
+                      <td>{{x.lop}}</td>
+                      <td>{{x.ngaydangky}}</td>
+                      <td>{{x.ngaymuon}}</td>
+                      <td>{{x.ngaytra}}</td>
+                      <td *ngIf="x.datra==='T' || x.datra ==='F'">{{x.datra}}</td>
+                      <td *ngIf="x.datra !=='T' && x.datra !=='F'">Lịch dự kiến</td>    
+                    </tr>
+                </tbody>
+           
+          </table>
+      </div>
+  </div>
+    <app-user/>
+</div>
+<app-footer/>
+

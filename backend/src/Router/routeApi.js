@@ -1,0 +1,30 @@
+const UserController = require("../Controller/Api/apiUser")
+const ThietBiController = require("../Controller/Api/apiThietBi")
+const LichSuController = require("../Controller/Api/apiLichSu")
+const router = require("express").Router()
+
+router.post('/login', UserController.findUserPass)
+router.get('/user/:id', UserController.findOneUser)
+router.get('/user', UserController.findAllUser)
+router.post('/user', UserController.themNguoiDung)
+router.put('/user', UserController.capNhatNguoiDung)
+router.post('/user-delete', UserController.xoaNguoiDung)
+
+router.post('/thiet-bi-delete', ThietBiController.deleteThietBiPhong)
+router.post('/thiet-bi', ThietBiController.themThietBiPhong)
+router.get('/thiet-bi', ThietBiController.findAllThietBi)
+router.put('/thiet-bi', ThietBiController.capNhatThietBiPhong)
+router.get('/thiet-bi/:id', ThietBiController.findOneThietBi)
+router.post('/het-han', ThietBiController.hetHan)
+router.get('/thiet-bi-hsd', ThietBiController.findAllThietBiHsd)
+router.get('/thiet-bi-ph', ThietBiController.findAllBoMon)
+router.put('/thiet-bi-sl', ThietBiController.capNhatSl)
+
+router.get('/lich-su/:id', LichSuController.findOneLichSu)
+router.post('/lich-su', LichSuController.dangKyThietBiPhong)
+router.put('/lich-su', LichSuController.traThietBiPhong)
+router.get('/lich-su', LichSuController.findAllLichSu)
+router.get('/lich-su-u/:id', LichSuController.findLichSuUser)
+router.get('/lich-su-tb/:id', LichSuController.findLichSuTb)
+
+module.exports = router

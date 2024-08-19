@@ -1,0 +1,38 @@
+<app-header/>
+<div class="content">
+  <div class="main scroll">
+    <app-search/>
+    <div style="display: flex; justify-content: center; font-size: 2rem; color: red;">Danh sách thiết bị</div>
+    <div>
+          <table>
+              <thead>
+                  <tr>
+                    <th>STT</th>
+                    <th>Tên thiết bị</th>
+                    <th>Bộ môn</th>
+                    <th>Số lượng</th>
+                    <th style="padding-left: 30px; width: 60px;">Đăng ký</th>
+                  </tr>
+              </thead>
+                <tbody>
+                    <tr *ngFor="let x of thietBi;let i = index" [ngClass]="{'red-background': x.quantity === '0'}">
+                      <td>{{i+1}}</td>
+                      <td>{{x.name}}</td>
+                      <td>{{x.mon}}</td>
+                      <td>{{x.quantity}}</td>
+                      <td>
+                        <!-- <a (click)="muonThietBi(x.id)" [routerLink]="x.quantity === '0' ? '/thiet-bi':'/muon'"  style="color: rgb(14, 229, 28); display: flex; justify-content: center; text-decoration: none;" class="nav_item" routerLinkActive="active" ariaCurrentWhenActive="page">
+                          <i class="fas fa-check-circle"></i>
+                        </a> -->
+                        <a (click)="muonThietBi(x.id)" routerLink="/muon"  style="color: rgb(14, 229, 28); display: flex; justify-content: center; text-decoration: none;" class="nav_item" routerLinkActive="active" ariaCurrentWhenActive="page">
+                          <i class="fas fa-check-circle"></i>
+                        </a>
+                      </td>
+                    </tr>
+                </tbody>
+          </table>
+      </div>
+  </div>
+    <app-user/>
+</div>
+<app-footer/>

@@ -1,0 +1,94 @@
+<div class="header">
+    <div class="w_logo">
+        <img class="logo" src="../../../assets/logo_nvh.png" />
+        <h3 class="namet">
+            THPT Nguyễn Văn Huyên
+        </h3>
+    </div>
+    <div class="vach">.</div>
+    <div class="nav">
+        <a class="nav_item" href="/trang-chu">
+            <i class="fa-solid fa-house"></i>
+            <span class="n">Trang chủ</span>
+        </a>
+        <a class="nav_item">
+            <i class="fas fa-list"></i>
+        </a>
+    </div>
+</div>
+<div class="wrap">
+    <div class="container">
+        <div id="slide">
+            <div class="intro-item" style="background-image: url(.././../../assets/1.jpg);">
+                <div class="content">
+                    <div class="name">Đăng ký ngay</div>
+                    <div class="des">Phòng Giáo vụ phối hợp với Trung tâm Khảo thí &ĐBCLGD đang tiến hành cập nhật và rà soát điểm học kỳ 1 năm học 2023-2024</div>
+                    <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">
+                        <button class="start"><span class="la">Bắt đầu</span><i class="fa-solid fa-caret-right"></i></button>
+                    </a>
+                </div>
+            </div>
+            <div class="intro-item" style="background-image: url(../../../assets/2.jpg);">
+                <div class="content">
+                    <div class="name">Xin chào bạn !</div>
+                    <div class="des">Phòng Giáo vụ phối hợp với Trung tâm Khảo thí &ĐBCLGD đang tiến hành cập nhật và rà soát điểm học kỳ 1 năm học 2023-2024</div>
+                    <button>Xem thêm</button>
+                </div>
+            </div>
+           <div class="intro-item" style="background-image: url(../../../assets/3.jpg);">
+                <div class="content">
+                    <div class="name">THPT</div>
+                    <div class="des">Phòng Giáo vụ phối hợp với Trung tâm Khảo thí &ĐBCLGD đang tiến hành cập nhật và rà soát điểm học kỳ 1 năm học 2023-2024</div>
+                    <button>Xem thêm</button>
+                </div>
+            </div>
+            <div class="intro-item" style="background-image: url(../../../assets/4.jpg);">
+                <div class="content">
+                    <div class="name">THPT</div>
+                    <div class="des">Phòng Giáo vụ phối hợp với Trung tâm Khảo thí &ĐBCLGD đang tiến hành cập nhật và rà soát điểm học kỳ 1 năm học 2023-2024</div>
+                    <button>Xem thêm</button>
+                </div>
+            </div>
+            <div class="intro-item" style="background-image: url(../../../assets/5.jpg);">
+                <div class="content">
+                    <div class="name">THPT</div>
+                    <div class="des">Phòng Giáo vụ phối hợp với Trung tâm Khảo thí &ĐBCLGD đang tiến hành cập nhật và rà soát điểm học kỳ 1 năm học 2023-2024</div>
+                    <button>Xem thêm</button>
+                </div>
+            </div> 
+        </div>
+        <div class="buttons">
+            <button id="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+</div>
+<div class="login kk">
+    <img class="bg" src="../../../assets/1.jpg" alt="bg"/>"
+    <img class="bg" src="../../../assets/2.jpg" alt="bg"/>"
+    <img class="bg" src="../../../assets/3.jpg" alt="bg"/>"
+</div>
+<div *ngIf="status" class="login">
+    <app-login/>
+</div>
+<div *ngIf="!server" class="login">
+    <div>
+        <div class="loader"></div>
+        <br>
+        <br>
+        <br>
+        <div style="color: #333">Đang đợi phản hồi server</div>
+        <div style="color: #333">Đợi 30s đến 60s </div>
+        <div style="color: #333">Tải lại trang để tiếp tục</div>
+    </div>
+</div>
+<div *ngIf="!status" class="login">
+    <div style="display: flex;justify-content: center; align-items: center; height: 100%; color: red;">
+        <a href="https://github.com/LuongLuyen">
+            Bản quyền thuộc về Luong Luyen PTIT
+        </a>
+    </div>
+</div>
+
+</div>
+<app-footer/>
+<router-outlet></router-outlet>

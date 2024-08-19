@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Frontend</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="styles-2ATS7KEB.css"></head>
+<body>
+  <app-root></app-root>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('next').onclick = function(){
+      let lists = document.querySelectorAll('.intro-item');
+      document.getElementById('slide').appendChild(lists[0]);
+    };
+    document.getElementById('prev').onclick = function(){
+      let lists = document.querySelectorAll('.intro-item');
+      document.getElementById('slide').prepend(lists[lists.length - 1]);
+    };
+  });
+  </script>
+<script src="polyfills-6EAL64PA.js" type="module"></script><script src="main-7J2GQ2OH.js" type="module"></script></body>
+</html>

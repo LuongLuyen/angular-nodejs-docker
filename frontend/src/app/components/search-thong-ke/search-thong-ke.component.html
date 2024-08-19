@@ -1,0 +1,37 @@
+<div class="loc">
+    <div class="w_loc">
+      <input type="text"
+      [(ngModel)]="searchUser"
+      (input)="onSearch()" 
+      placeholder="Tên người mượn"/>
+    </div>
+    <div class="w_loc">
+      <input type="text"
+      [(ngModel)]="searchTB"
+      (input)="onSearch()" 
+      placeholder="Thiết bị"/>
+    </div>
+    <div class="w_loc">
+      <select class="item" [(ngModel)]="selectedOption" (change)="onSearch()">
+        <option *ngFor="let option of options" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+    </div>
+    <div class="w_loc">
+      <span>
+        <span>Theo ngày trả:</span>
+        <input 
+        class="item" type="date"    
+        [(ngModel)]="startDate"
+        (change)="onSearch()"
+        />
+        <span style="padding: 0 4px 0 4px;">Đến</span>
+        <input class="item" type="date"
+        [(ngModel)]="endDate"
+        (change)="onSearch()"
+        />
+      </span>
+      <button (click)="reloadCurrentPage()" class="btn">Xóa bộ lọc</button>
+    </div>
+  </div>

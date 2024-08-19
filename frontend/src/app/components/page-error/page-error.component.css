@@ -1,0 +1,18 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: red;
+}
+.error-item1 {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: rgb(105, 245, 18);
+    color: #fff;
+}
+.error-item2 {
+    padding: 10px;
+    font-size: 2rem;
+}

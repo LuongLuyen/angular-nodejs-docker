@@ -1,0 +1,27 @@
+<div class="user">
+    <div className="cardp">
+        <div class="img">
+            <img  src="../../../assets/avt.jpg" alt="John"/>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+            <h2>{{user.name}}</h2>
+            <p className="title">Vai trò: {{user.role}}</p>
+            <p>Tài khoản: {{user.userName}}</p>
+
+        </div>
+            <div style="display: flex; justify-content: center;">
+                <a className='iconP' routerLink="/trang-chu"> <i class="fa-brands fa-facebook iconP"></i></a>
+                <a className='iconP' routerLink="/trang-chu"> <i class="fa-brands fa-square-instagram iconP"></i></a>
+                <a className='iconP' routerLink="/trang-chu"> <i class="fa-brands fa-github iconP"></i></a>
+                <a className='iconP' routerLink="/trang-chu"> <i class="fa-brands fa-youtube iconP"></i></a>
+
+            </div>
+        <p>
+          <a routerLink='/trang-chu'>
+          <button>Hồ sơ</button>
+          </a>
+        </p>
+        <p><button (click)="logout()" >Đăng xuất</button></p>
+      </div>
+</div>
+<router-outlet></router-outlet>

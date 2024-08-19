@@ -1,0 +1,59 @@
+.content {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  
+}
+.main {
+  width: 100%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr {
+  height: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+thead {
+  background-color: #ad171c;
+  color: #fff;
+}
+.scroll {
+overflow-y: scroll;
+}
+.vang {
+  background-color: yellow !important;
+}
+/* responsive
+/* Mobile: width < 740px = 46.1875em */
+@media (max-width: 46.1875em) {
+
+
+}
+
+@media (min-width: 1020px) and (max-width: 1200px){
+
+} 
+/* Tablet: width >= 740px and width <1024px  */
+@media (min-width: 46.25em) and (max-width: 63.9375em){
+
+} 

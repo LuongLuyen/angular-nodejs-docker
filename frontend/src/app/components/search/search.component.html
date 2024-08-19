@@ -1,0 +1,18 @@
+<div class="loc">
+    <div class="w_loc">
+      <input type="text"
+      [(ngModel)]="searchTerm"
+      (input)="onSearch()" 
+      placeholder="Tìm kiếm theo tên"/>
+    </div>
+    <div class="w_loc">
+      <select style="height: 40px; width: 100px;" [(ngModel)]="selectedOption" (change)="onSearch()">
+        <option *ngFor="let option of options" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+    </div>
+    <div class="w_loc">
+      <button (click)="reloadCurrentPage()" style="width: 100px; height: 40px; margin: 10px; border-radius: 100px; background-color: rgb(50, 235, 65); color: #fff;">Xóa bộ lọc</button>
+    </div>
+  </div>

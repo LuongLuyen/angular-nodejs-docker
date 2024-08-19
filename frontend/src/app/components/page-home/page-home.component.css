@@ -1,0 +1,16 @@
+.content {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  
+}
+.main {
+  width: 100%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.scroll {
+  overflow-y: scroll;
+}

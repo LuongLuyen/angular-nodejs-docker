@@ -1,0 +1,25 @@
+.footer {
+    background-color: #37a0f0;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* .footer_item {
+    margin: 20px;
+    font-size: 40px;
+    color: #fff;
+} */
+.footer_item {
+    font-size: 1rem;
+    color: #fff;
+}
+/* responsive
+/* Mobile: width < 740px = 46.1875em */
+@media (max-width: 46.1875em) {
+
+   .footer_item {
+    font-size: .8rem;
+   }
+}
